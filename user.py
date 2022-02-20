@@ -28,3 +28,25 @@ class User:
         '''
 
         User.user_list.remove(self)
+
+        #Class secretdetails
+
+        class Secretdetails():
+
+            '''
+            This class is used to come up with new objects of the details a user needs 
+            '''
+
+            secretdetails_list = []
+            @classmethod
+            def confirm_user(cls,username,password):
+                '''
+                this method confirms if our user is in the user list or not
+                '''
+
+                a_user = ''
+                for user in User.user_list:
+                    if(user.username == username and user.password == password):
+                        a_user == user.username
+                return a_user
+                
