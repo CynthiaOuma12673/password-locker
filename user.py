@@ -59,3 +59,10 @@ class User:
                 self.password = password
                 self.account = emailaccount
 
+            def save_credentials(self):
+                '''
+                this method will store new details to the secretdtails_list
+                '''
+
+                Secretdetails.secretdetails_list.append(self)
+

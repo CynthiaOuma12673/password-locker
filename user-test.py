@@ -1,5 +1,6 @@
 import unittest
 from user import User
+from user import Secretdetails
 
 class TestClass(unittest.TestCase):
 
