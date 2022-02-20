@@ -50,12 +50,12 @@ class User:
                         a_user == user.username
                 return a_user
 
-            def _init_(self, name, password, account):
+            def _init_(self, name, password, emailaccount):
                 '''
                 this method will show the user details that need to be saved
                 '''
 
                 self.name = name
                 self.password = password
-                self.account = account
+                self.account = emailaccount
 
