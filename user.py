@@ -4,7 +4,7 @@ class User:
     '''
     user_list = []
 
-    def _init_(self,username,password);
+    def _init_(self,username,password):
         
         '''
         this method will define all the properties that the user needs to have i.e username and password
