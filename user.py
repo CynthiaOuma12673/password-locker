@@ -1,3 +1,6 @@
+import random
+import string
+
 class User:
     '''
     It creates the user class that generates new instances of the user
@@ -17,3 +20,11 @@ class User:
         This method will save the new user to the list of users
         '''
         User.user_list.append(self)
+        
+
+    def delete_user(self):
+        '''
+        it deletes a user who has a saved account
+        '''
+
+        User.user_list.remove(self)
