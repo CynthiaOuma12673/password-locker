@@ -57,12 +57,29 @@ class User:
 
                 self.name = name
                 self.password = password
-                self.account = emailaccount
+                self.emailaccount = emailaccount
 
             def save_credentials(self):
                 '''
-                this method will store new details to the secretdtails_list
+                this method will store new details to the secretdetails_list
                 '''
 
                 Secretdetails.secretdetails_list.append(self)
+
+            def delete_secretdetails(self):
+                '''
+                this method deletes the secretdetails account from the secretdetails list
+                '''
+
+                Secretdetails.secretdetails_list.remove(self)
+
+            @classmethod
+            def get_secretdetails(cls, emailaccount):
+                '''
+                this method uses the emailaccount name to return secret details that are matched to that account
+                '''
+
+                for secretdetails in cls.secretdetails_list:
+                    if secretdetails.emailaccount == emailaccount:
+                        return secretdetails
 
