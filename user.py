@@ -49,4 +49,13 @@ class User:
                     if(user.username == username and user.password == password):
                         a_user == user.username
                 return a_user
-                
+
+            def _init_(self, name, password, account):
+                '''
+                this method will show the user details that need to be saved
+                '''
+
+                self.name = name
+                self.password = password
+                self.account = account
+
