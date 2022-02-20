@@ -8,3 +8,10 @@ class testuser(unittest.TestCase);
     def setUp(self);
         
         self.newuser = User('OumaCynthia', 'Cyn12673#')
+
+    def test_init(self);
+        self.assertEqual(self.newuser.username,'OumaCynthia')
+        self.assertEqual(self.newuser.password,'Cyn12673#')
+
+if _name_ == "_main_":
+    unittest.main()
