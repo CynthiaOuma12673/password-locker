@@ -92,3 +92,12 @@ def obtain_password():
     return auto_password
 
 
+def copy_password(emailaccount):
+    '''
+    this function will copy the passwrd using pyperclip
+    '''
+
+    return Secretdetails.copy_password(emailaccount)
+
+
+
