@@ -47,3 +47,13 @@ def create_new_secretdetails(emailaccount,name,password):
 
     new_secretdetails = Secretdetails(emailaccount,name,password)
     return new_secretdetails
+
+def save_secretdetails(secretetails):
+    '''
+    this is a function that saves the secret details to the list
+    '''
+
+    secretetails.save_secretdetails()
+
+
+

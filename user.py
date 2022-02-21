@@ -60,7 +60,7 @@ class User:
                 self.password = password
                 self.emailaccount = emailaccount
 
-            def save_credentials(self):
+            def save_secretdetails(self):
                 '''
                 this method will store new details to the secretdetails_list
                 '''
