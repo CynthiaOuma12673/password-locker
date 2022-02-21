@@ -16,3 +16,10 @@ def create_newuser(username, password):
 
     newuser = User(username, password)
     return newuser
+
+def save_user(user):
+    '''
+    this function will save a new user after it is created
+    '''
+
+    user.save_user()
