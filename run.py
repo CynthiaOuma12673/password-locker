@@ -1,13 +1,14 @@
-from user import User, Secretdetails
+from user import User
+from details import Secretdetails
 
-def function():
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-function()
+# def function():
+#         print("")
+#         print("")
+#         print("")
+#         print("")
+#         print("")
+#         print("")
+# function()
 
 def create_newuser(username, password):
     '''
@@ -195,7 +196,7 @@ def accessor():
         print('Kindly input  valid input to proceed')
 
     if __name__ == '__main__':
-    accessor()
+        accessor()
 
 
 
