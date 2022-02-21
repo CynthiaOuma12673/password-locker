@@ -69,4 +69,11 @@ def delete_secretdetails(secretetails):
 
     secretetails.delete_secretdetails()
 
+def get_secretdetails(emailaccount):
+    '''
+    this is a function that searches for the secretdetails using the name and password and shows it
+    '''
+
+    return Secretdetails.get_secretdetails(emailaccount)
+
 
