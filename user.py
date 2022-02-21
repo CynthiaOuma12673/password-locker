@@ -83,3 +83,27 @@ class User:
                     if secretdetails.emailaccount == emailaccount:
                         return secretdetails
 
+            @classmethod
+            def copy_password(cls, emailaccount):
+
+                '''
+                this method checks for the password in the emailaccount and allows user access
+                '''
+
+                gotten_secretdetails = Secretdetails.get_secretdetails(emailaccount)
+                pyperclip.copy(gotten_secretdetails.password)
+
+            @classmethod
+            def if_secretdetails_exist(cls,emailaccount):
+                '''
+                this method checks if the details exist i the secret details list
+                '''
+
+                for secretdetails in cls.secretdetails_list:
+                    if secretdetails.emailaccount == emailaccount:
+                        return True
+                return False
+
+            
+
+
