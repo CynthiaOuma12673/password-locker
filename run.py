@@ -39,3 +39,11 @@ def login_user(username,password):
 
     verify_user = Secretdetails.confirm_user(username,password)
     return verify_user
+
+def create_new_secretdetails(emailaccount,name,password):
+    '''
+    this function will create new secretetails for a new user emailaccount
+    '''
+
+    new_secretdetails = Secretdetails(emailaccount,name,password)
+    return new_secretdetails
