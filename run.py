@@ -62,4 +62,11 @@ def show_emailaccount_details():
 
     return Secretetails.show_secretdetails()
 
+def delete_secretdetails(secretetails):
+    '''
+    this function deletes secretdetails from the secretdetails list
+    '''
+
+    secretetails.delete_secretdetails()
+
 
