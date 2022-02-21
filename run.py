@@ -76,4 +76,11 @@ def get_secretdetails(emailaccount):
 
     return Secretdetails.get_secretdetails(emailaccount)
 
+def verify_secretdetails(emailaccount):
+    '''
+    this function will check if the secret details exist and return a yes or a no
+    '''
+
+    return Secretdetails.if_secretdetails_exist(emailaccount)
+
 
