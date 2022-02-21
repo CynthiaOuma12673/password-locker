@@ -104,6 +104,14 @@ class User:
                         return True
                 return False
 
+            @classmethod
+            def show_secretdetails(cls):
+                '''
+                this method will display all the details in the secretdetails list
+                '''
+
+                return cls.secretdetails_list
+
             
 
 
