@@ -23,3 +23,11 @@ def save_user(user):
     '''
 
     user.save_user()
+
+def show_user():
+
+    '''
+    this is a function that will show the user who is already existing
+    '''
+
+    return User.show_user()
