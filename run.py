@@ -55,5 +55,11 @@ def save_secretdetails(secretetails):
 
     secretetails.save_secretdetails()
 
+def show_emailaccount_details():
+    '''
+    this is a function that gives all the saves secret details
+    '''
+
+    return Secretetails.show_secretdetails()
 
 
