@@ -111,6 +111,13 @@ class User:
                 '''
 
                 return cls.secretdetails_list
+            def obtainpassword(stringLength = 7)
+                '''
+                this method will generate a strong password with 7characters
+                '''
+
+                password = string.ascii_uppercase + string.ascii_lowercase + string.digits + '%&$#@!'
+                return ''.join(random.choice(password)for i in range(stringLength))
 
             
 
