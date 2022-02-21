@@ -83,4 +83,12 @@ def verify_secretdetails(emailaccount):
 
     return Secretdetails.if_secretdetails_exist(emailaccount)
 
+def obtain_password():
+    '''
+    this function will create a random password for the user
+    '''
+
+    auto_password = Secretdetails.obtainpassword()
+    return auto_password
+
 
