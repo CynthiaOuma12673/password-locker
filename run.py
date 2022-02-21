@@ -31,3 +31,11 @@ def show_user():
     '''
 
     return User.show_user()
+
+def login_user(username,password):
+    '''
+    a function that lets the user login after checking the details
+    '''
+
+    verify_user = Secretdetails.confirm_user(username,password)
+    return verify_user
