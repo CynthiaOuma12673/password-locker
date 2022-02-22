@@ -29,7 +29,3 @@ class User:
         '''
 
         User.user_list.remove(self)
-
-        #Class secretdetails
-
-        

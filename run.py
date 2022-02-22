@@ -1,21 +1,21 @@
 from user import User
 from details import Secretdetails
 
-# def function():
-#         print("")
-#         print("")
-#         print("")
-#         print("")
-#         print("")
-#         print("")
-# function()
+def function():
+    print("                          __    __   __  ")
+    print("                         |  |  |  | |  | ")
+    print("                         |  |__|  | |  | ")
+    print("                         |   __   | |  | ")
+    print("                         |  |  |  | |  | ")
+    print("                         |__|  |__| |__| ")
+function()
 
-def create_newuser(username, password):
+def create_newuser(self,username, password):
     '''
     this is function that is used to create a new username and a password
     '''
 
-    newuser = User(username, password)
+    newuser = User(self,username, password)
     return newuser
 
 def save_user(user):
@@ -98,44 +98,44 @@ def copy_password(emailaccount):
     this function will copy the passwrd using pyperclip
     '''
 
-    return Secretdetails.copy_password(emailaccount)
+    return Secretdetails.copy_password(emailaccount)                 
 
-def accessor():
+def main():
     print('Hae welcome to password locker ...\n Kindly input the following to continue.\n  cn --- Create an account \n  li --- have an account\n')
     short_code = input('').lower().strip()
-    if short_code == 'ca':
+    if short_code == 'cn':
         print('Sign Up')
-        print('*' *50)
         username = input('Username:')
         while True:
             print('tp ---type your password: \n gp ---generate a random password')
+            password_option = input().lower().strip()
             if password_option == 'tp':
                 password = input('Input Password\n')
+                return password
                 break
             elif password_option == 'gp':
                 password = obtain_password()
+                return password
                 break
             else:
                 print('password not correct kindly try again')
         save_user(create_newuser(username, password))
-        print('*'*85)
-        print(f'Hae {username}, Account successfully created, your password s {password} ')
-        print('*'*85)
+        print(f"Hae {username}, Your account has been created succesfully! Your password is: {password}")
+
     elif short_code == 'li':
-        print('*'*50)
         print('Input your username and password to login')
-        print('*'*50)
         username = input('Username:')
         password = input('password:')
-        login = login_user(username, password)
+        login = login_user(username,password)
         if login_user == login:
             print(f'Hae {username} welcome to password locker')
             print ('\n')
+
     while True:
-        print('user the following short codes to create your secretdetails\n, cs -- create a new secret details\n ds ---display secretdetails\n fs --find secretdetails\n gp --- obtain random password\n d --- delete details \n ex --- exit the locker\n')
+        print('user the following short codes to create your secretdetails\n cs -- create a new secret details\n ds ---display secretdetails\n fs --find secretdetails\n gp --- obtain random password\n d --- delete details \n ex --- exit the locker\n')
+        short_code = input('').lower().strip()
         if short_code == 'cs':
             print('Create new details')
-            print('.'*20)
             print('Emailaccount....')
             emailaccount = input().lower()
             print('Your emailaccount name')
@@ -152,24 +152,23 @@ def accessor():
                     print('\n')
                     print(f'emailaccount details for:{emailaccount} - name: {name} - password: {password} has been successfully created')
                     print('\n')
+                    break
         elif short_code == 'ds':
             if show_emailaccount_details():
                 print('Here are your accounts:')
-                print('*'*30)
-                print('_'*30)
                 for emailaccount in show_emailaccount_details():
                     print(f'emailaccount: {emailaccount.emailaccount}\n Name: {username}\n Password: {password}')
-                    print('_'*30)
-                    print('*'*30)
+                    break
             else:
                 print('You have not created an account')
+                
         elif short_code == 'fs':
-            print('Kindly input the email account you wish to serach')
+            print('Kindly input the email account you wish to search')
             search_name = input().lower()
             if get_secretdetails(search_name):
                 search_secretdetails = get_secretdetails(search_name)
                 print(f'emailaccount: {search_secretdetails.name} password : {search_secretdetails.password}')
-                print('-'*50)
+                break
             else:
                 print('The details do not exist')
                 print('\n')
@@ -178,7 +177,6 @@ def accessor():
             search_name = input().lower()
             if get_secretdetails(search_name):
                 search_secretdetails = get_secretdetails(search_name)
-                print('_'*50)
                 search_secretdetails.delete_secretdetails()
                 print('\n')
                 print(f'your account : {search_secretdetails.emailaccount} has been deleted successfully')
@@ -188,15 +186,21 @@ def accessor():
         elif short_code == 'gp':
             password = obtain_password()
             print(f'{password} was successfully obtained')
+            break
         elif short_code == 'ex':
             print('Thanks for using password locker, see you next time')
+            break
         else:
             print('Kindly input a valid entry')
+            break
     else:
         print('Kindly input  valid input to proceed')
+        
 
-    if __name__ == '__main__':
-        accessor()
+if __name__ == '__main__':
+    main()
+
+        
 
 
 

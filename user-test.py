@@ -8,7 +8,7 @@ class TestClass(unittest.TestCase):
     This test class will define the test cases for the user class
     '''
 
-    def setUp(self);
+    def setUp(self):
         
         self.newuser = User('OumaCynthia', 'Cyn12673#')
 
@@ -21,6 +21,8 @@ class TestClass(unittest.TestCase):
         self.assertEqual(self.newuser.username,'OumaCynthia')
         self.assertEqual(self.newuser.password,'Cyn12673#')
 
+        print(username)
+
     def test_save_user(self):
 
         '''
@@ -32,6 +34,7 @@ class TestClass(unittest.TestCase):
 
 
 
+
 if _name_ == "_main_":
-    unittest.main()
+    test_init()
 
