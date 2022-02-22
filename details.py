@@ -21,14 +21,14 @@ class Secretdetails:
                         a_user == user.username
                 return a_user
 
-            def _init_(self, name, password, emailaccount):
+            def _init_(self, name, password, account):
                 '''
                 this method will show the user details that need to be saved
                 '''
 
                 self.name = name
                 self.password = password
-                self.emailaccount = emailaccount
+                self.account = account
 
             def save_secretdetails(self):
                 '''
@@ -45,33 +45,33 @@ class Secretdetails:
                 Secretdetails.secretdetails_list.remove(self)
 
             @classmethod
-            def get_secretdetails(cls, emailaccount):
+            def get_secretdetails(cls, account):
                 '''
-                this method uses the emailaccount name to return secret details that are matched to that account
+                this method uses the account name to return secret details that are matched to that account
                 '''
 
                 for secretdetails in cls.secretdetails_list:
-                    if secretdetails.emailaccount == emailaccount:
+                    if secretdetails.account == account:
                         return secretdetails
 
             @classmethod
-            def copy_password(cls, emailaccount):
+            def copy_password(cls, account):
 
                 '''
-                this method checks for the password in the emailaccount and allows user access
+                this method checks for the password in the account and allows user access
                 '''
 
-                gotten_secretdetails = Secretdetails.get_secretdetails(emailaccount)
+                gotten_secretdetails = Secretdetails.get_secretdetails(account)
                 pyperclip.copy(gotten_secretdetails.password)
 
             @classmethod
-            def if_secretdetails_exist(cls,emailaccount):
+            def if_secretdetails_exist(cls,account):
                 '''
                 this method checks if the details exist i the secret details list
                 '''
 
                 for secretdetails in cls.secretdetails_list:
-                    if secretdetails.emailaccount == emailaccount:
+                    if secretdetails.account == account:
                         return True
                 return False
 
